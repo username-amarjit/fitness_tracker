@@ -1,5 +1,5 @@
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth.models import User
@@ -39,3 +39,17 @@ def forgot_password(request):
                 return Response({"message":"OTP sent to mail Successfully."},status=status.HTTP_200_OK)
             return Response({"message":"No mail is set with given username. Kindly contact administrator."},status=status.HTTP_400_BAD_REQUEST)
         return Response({"message":"User not found for given email/username."},status=status.HTTP_401_UNAUTHORIZED)
+
+
+
+@api_view(['GET','POST','PUT','DELETE'])
+@permission_classes([IsAuthenticated])
+def workouts(request):
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+        pass
+    elif request.method == 'PUT':
+        pass
+    elif request.method == 'DELETE':
+        pass

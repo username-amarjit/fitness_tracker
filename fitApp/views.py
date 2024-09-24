@@ -20,7 +20,7 @@ def sign_up(request):
 @permission_classes([AllowAny])
 def forgot_password(request):
     if request.method == 'POST':
-        print(request.data)
+        # print(request.data)
         req_username = request.data.get("username") 
         req_email = request.data.get("email")
 
@@ -29,10 +29,10 @@ def forgot_password(request):
         elif req_email:
             user_obj = User.objects.filter(email = req_email,is_active=True)
 
-        print("4567890",user_obj)
+        # print("4567890",user_obj)
         if user_obj:
             email = user_obj.first().email
-            print('email--------',email)
+            # print('email--------',email)
             if email:
                 # send_email(email)
                 pass

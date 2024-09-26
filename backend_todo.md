@@ -1,29 +1,29 @@
 # Development Tasks for Workout Scheduler Backend
 
 ## 1. User Authentication
-- [ ] **Set Up User Model**
+- [x] **Set Up User Model**
   - Create a schema for user registration (username, email, password).
-- [ ] **Implement User Registration**
+- [x] **Implement User Registration**
   - Create an endpoint for user signup (`POST /api/auth/signup`).
   - Hash passwords before saving to the database.
-- [ ] **Implement User Login**
+- [x] **Implement User Login**
   - Create an endpoint for user login (`POST /api/auth/login`).
   - Validate credentials and generate a JWT token.
-- [ ] **Set Up JWT Middleware**
+- [x] **Set Up JWT Middleware**
   - Create middleware to protect routes using JWT.
 - [ ] **Implement Password Reset**
   - Create endpoints for password reset requests and updates.
 
 ## 2. Workout Management
-- [ ] **Create Workout Model**
+- [x] **Create Workout Model**
   - Define a schema for workouts (user ID, date, exercises, comments).
-- [ ] **Implement Create Workout Endpoint**
+- [x] **Implement Create Workout Endpoint**
   - Create an endpoint for adding a new workout (`POST /api/workouts`).
-- [ ] **Implement Update Workout Endpoint**
+- [x] **Implement Update Workout Endpoint**
   - Create an endpoint to update a workout (`PUT /api/workouts/:id`).
-- [ ] **Implement Delete Workout Endpoint**
+- [x] **Implement Delete Workout Endpoint**
   - Create an endpoint to delete a workout (`DELETE /api/workouts/:id`).
-- [ ] **Implement Get Active Workouts Endpoint**
+- [X] **Implement Get Active Workouts Endpoint**
   - Create an endpoint to retrieve a list of active workouts (`GET /api/workouts`).
 - [ ] **Implement Get Past Workouts Endpoint**
   - Create an endpoint for past workouts (`GET /api/workouts/past`).
